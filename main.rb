@@ -1,4 +1,10 @@
+require './classes/app'
+require './modules/book_module'
+require_relative './modules/music_album_module'
+
 class Main
+  include BookModule
+  include MusicAlbumModule
 
   def initialize
     @app = App.new
@@ -23,24 +29,25 @@ class Main
     user_input = gets.chomp
     case user_input
     when '1'
-      'list_all_books'
+      @app.list_all_books
     when '2'
-      'list_all_albums'
+      @app.list_all_albums
     when '3'
       'list_all_games'
     when '4'
-      'list_all_genres'
+      @app.list_all_genres
     when '5'
-      'list_all_labels'
+      @app.list_all_labels
     when '6'
       'list_all_authors'
     when '7'
-      'add_new_book_details'
+      add_new_book_details
     when '8'
-      'add_new_album_details'
+      add_new_album_details
     when '9'
       'add_new_game_details'
     when '10'
+      @app.preserve_files
       puts 'Exiting the application...'
       sleep 2
       exit
