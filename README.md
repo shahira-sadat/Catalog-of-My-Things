@@ -26,7 +26,7 @@
 - Run `irb` to run the code by pasting it in the terminal.
 - Run `rubocop` to find and fix linters
 
-## Author :writing_hand: :busts_in_silhouette:
+## Author 
 
  **Shahira Sadat**
 
